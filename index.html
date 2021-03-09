@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidor Eletrônico</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="midia/atomo.png">
+    <meta name="description" content="Faz a distribuição eletrônica dos elétrons automaticamente, além de fazer buscas na tabela periódica fornecendo a distribução, nome, símbolo, número atômico, família e muito mais.">
+</head>
+<body>
+    <section id="menu">
+        <div id="content">
+            <div id="dist">
+                <div class="center">Buscar por distribuição</div><br>
+                <div id="sub-inputs">
+                    1s<input type="number" id="1s" value="1" min="1" max="2" class="number" ><br>
+                    2s<input type="number" id="2s" value="0" min="0" max="2" class="number" >
+                    2p<input type="number" id="2p" value="0" min="0" max="6" class="number" ><br>
+                    3s<input type="number" id="3s" value="0" min="0" max="2" class="number" >
+                    3p<input type="number" id="3p" value="0" min="0" max="6" class="number" >
+                    3d<input type="number" id="3d" value="0" min="0" max="10" class="number" ><br>
+                    4s<input type="number" id="4s" value="0" min="0" max="2" class="number" >
+                    4p<input type="number" id="4p" value="0" min="0" max="6" class="number" >
+                    4d<input type="number" id="4d" value="0" min="0" max="10" class="number" >
+                    4f<input type="number" id="4f" value="0" min="0" max="14" class="number" ><br>
+                    5s<input type="number" id="5s" value="0" min="0" max="2" class="number" >
+                    5p<input type="number" id="5p" value="0" min="0" max="6" class="number" >
+                    5d<input type="number" id="5d" value="0" min="0" max="10" class="number" >
+                    5f<input type="number" id="5f" value="0" min="0" max="14" class="number" ><br>
+                    6s<input type="number" id="6s" value="0" min="0" max="2" class="number" >
+                    6p<input type="number" id="6p" value="0" min="0" max="6" class="number" >
+                    6d<input type="number" id="6d" value="0" min="0" max="10" class="number"><br>
+                    7s<input type="number" id="7s" value="0" min="0" max="2" class="number" >
+                    7p<input type="number" id="7p" value="0" min="0" max="6" class="number"><br><br>
+                </div>
+                Carga: <input type="number" id="dist-carga" value="0" class="carga"><br> <br>
+                <input type="button" value="Enviar" id="bpde-btn">
+                <input type="button" value="Limpar" id="clean-btn"><br><br>
+            </div>
+            <div id="numat" style="display: none;">
+                <span class="width_full">Buscar por Número Atômico(número de prótons).</span>
+                    <div>
+                        Num. Atômico:
+                        <input type="number" min="1" max="118" value="" id="num" autocomplete="off"><br><br>
+                        Carga: 
+                        <input type="number" id="bpna-carga" value="0" class="carga">
+                        <input type="button" value="Enviar" id="bpna">
+                    </div>
+            </div>
+            <div id="name" style="display: none;">
+                <div id="central">
+                    <div class="center">
+                        Busca por nome:<br> <input type="text" id="nome"> 
+                        <input type="button" id="bpn" value="Buscar"><br>
+                        Busca por símbolo:<br> <input type="text" id="simbolo" >
+                        <input type="button" id="bps" value="Buscar">
+                    </div><br>
+                    <span class="msg"><span class="atention">Atenção!!!</span> O programa não é case sensitive, porém é necessário por os acentos.</span>
+                </div>
+            </div>
+        </div>
+        <div id="div-input-type">
+            Buscar por: 
+            <select id="input-type">
+                <option value="dist" selected>Distribuição.</option>
+                <option value="numat">Número Atômico.</option>
+                <option value="name">Nome ou símbolo.</option>
+                <option value="all">Mostrar Todos.</option>
+            </select>
+        </div>
+    </section>
+    <!-- <div class="aviso">Obs: Este programa não verifica se o estado do átomo é possível, ou seja se um íon for informado
+        independente de exixtir ou não ele será mostrado, por isso verifique se as informações inseridas estão corretas.
+    </div><br><br> -->
+    <div id="loading" style="display: none;"></div>
+    <section id="res">
+        <span id="msg">Buscas feitas:</span><br>
+    </section>
+    <footer>&copy;Arthur Lobo</footer>
+    <script src="index.js" type="module"></script>
+</body>
+</html>

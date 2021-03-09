@@ -1,0 +1,297 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #56CCF2;
+  padding: 0;
+  margin: 0;
+  height: calc(100vh - 11px);
+  min-width: 320px;
+}
+
+section {
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  font-family: 'Roboto Slab', cursive, Arial;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+  footer {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto 10px;
+  }
+}
+
+#menu {
+  width: 400px;
+  margin: 10px auto 15px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+  #menu {
+    width: 355px;
+  }
+}
+
+#div-input-type {
+  margin: 10px auto 5px;
+}
+
+#numat {
+  border: 2px solid blue;
+  border-radius: 5px;
+  margin: 0 5px;
+  text-align: center;
+  padding: 5px 5px 10px;
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#numat > div {
+  margin-top: 15px;
+}
+
+#dist {
+  border: 2px solid blue;
+  padding: 10px;
+  width: 274px;
+  border-radius: 5px;
+  margin-right: 5px;
+  text-align: left;
+}
+
+#msg {
+  width: 100%;
+  text-align: center;
+}
+
+.width_full {
+  width: 100%;
+}
+
+.carga {
+  width: 100px;
+}
+
+div.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+}
+
+#name {
+  border: 2px solid blue;
+  border-radius: 5px;
+  margin: 0 auto 0px 5px;
+  text-align: center;
+  padding: 5px 15px;
+  width: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#central {
+  text-align: left;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+
+.msg {
+  margin: auto;
+  text-align: left;
+}
+
+div.center {
+  text-align: center;
+}
+
+.aviso {
+  border: 2px solid black;
+  text-align: center;
+}
+
+#res {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 85%;
+  display: none;
+  margin: 0 auto 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 400px) {
+  #res {
+    width: inherit;
+    margin: 0 0 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.res {
+  border: 2px solid blue;
+  border-radius: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 40%;
+  padding: 10px;
+  margin: 10px 10px 0 0;
+  float: left;
+}
+
+.number {
+  width: 38px;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+  margin: 1px 0 0 0;
+}
+
+.number::-webkit-inner-spin-button {
+  display: none;
+}
+
+.atention {
+  color: red;
+  font-weight: bold;
+}
+
+.invisible {
+  display: none !important;
+}
+
+/*Botões e inputs*/
+input {
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #767676;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1px;
+}
+
+input:invalid {
+  border-width: 2px;
+  outline: 1px solid red;
+  outline-offset: -3px;
+}
+
+input[type="button"] {
+  cursor: pointer;
+  padding: 1px 3px;
+}
+
+/* Função apagar div*/
+.circle {
+  width: 18px;
+  float: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 18px;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -8px -8px auto auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.circle:hover {
+  background-color: lightgray;
+}
+
+.circle img {
+  margin: auto;
+  width: 10px;
+  height: 10px;
+}
+
+/*Fim Função apaga div*/
+#loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid rgba(118, 118, 118, 0.548);
+  border-left: 10px solid rgba(0, 0, 0, 0.459);
+  margin: auto;
+  -webkit-animation: loop 2s linear infinite;
+          animation: loop 2s linear infinite;
+}
+
+@-webkit-keyframes loop {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loop {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url("./fontes/RobotoSlab-Medium.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+/*# sourceMappingURL=index.css.map */
