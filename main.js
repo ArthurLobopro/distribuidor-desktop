@@ -2,13 +2,16 @@ const { app, BrowserWindow } = require('electron')
 
 function createWindow () {
     const win = new BrowserWindow({
-        width: 1000,
+        width: 800,
         minWidth: 375,
+        minHeight: 430,
         height: 800,
+        titleBarStyle: "hidden",
         webPreferences: {
             nodeIntegration: true
         }
     })
+    win.setIcon("./midia/atom_icon.png")
     win.setMenu(null)
     win.setTitle("Distribuidor Eletrônico Desktop")
     win.loadFile('index.html')
