@@ -7,11 +7,12 @@ function createWindow () {
         minHeight: 430,
         height: 800,
         titleBarStyle: "hidden",
+        icon: __dirname + "/midia/atom_icon.png",
         webPreferences: {
             nodeIntegration: true
         }
     })
-    win.setIcon("./midia/atom_icon.png")
+    win.setIcon(__dirname + "/midia/atom_icon.png")
     win.setMenu(null)
     win.setTitle("Distribuidor Eletrônico Desktop")
     win.loadFile('index.html')
