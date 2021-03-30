@@ -12,7 +12,6 @@ function createWindow () {
             nodeIntegration: true
         }
     })
-    win.setIcon(__dirname + "/midia/atom_icon.png")
     win.setMenu(null)
     win.setTitle("Distribuidor Eletrônico Desktop")
     win.loadFile('index.html')

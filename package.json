@@ -1,6 +1,6 @@
 {
   "name": "distribuidor-desktop",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "versão desktop da aplicação distribuidor eletrônico",
   "main": "main.js",
   "keywords": [],
@@ -24,7 +24,9 @@
   },
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "./midia/atom_icon.icns"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
