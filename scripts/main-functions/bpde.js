@@ -1,7 +1,6 @@
 import {formataInput,formataAtomo,formataSimbolo} from "../formata.js"
 import {escrevacamadas, ede, ecdv,escreve} from "../escreve.js"
-import Atomo from "../atomo.js"
-import atomos_info from "../atomos.js"
+import Atomo from "../Atomo.js"
 import {get} from "../util.js"
 let s1,s2,p2,s3,p3,d3,s4,p4,d4,f4,s5,p5,d5,f5,s6,p6,d6,s7,p7
 const get_fim = ()=>{

@@ -1,6 +1,6 @@
 import {formataInput,formataDados} from "../formata.js"
 import {escrevacamadas, ede, ecdv,escreve} from "../escreve.js"
-import Atomo from "../atomo.js"
+import Atomo from "../Atomo.js"
 import atomos_info from "../atomos.js"
 import {get} from "../util.js"
 const bps_input = get('simbolo')
