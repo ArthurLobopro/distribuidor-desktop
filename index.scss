@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #56CCF2;
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 11px);
+    min-width: 320px;
+}
+section {
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    margin: auto;
+}
+footer{
+    font-family: 'Roboto Slab', cursive, Arial;
+    color: white;
+    width: max-content;
+    margin: auto;
+    @media screen and (max-width: 400px) {
+        width: max-content;
+        margin: 0 auto 10px;
+    }
+}
+#menu{
+    width: max-content;
+    margin: 10px auto 15px;
+    padding: 10px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+#div-input-type{
+    margin: 10px auto 5px;
+}
+#numat{
+    border:2px solid blue;
+    border-radius: 5px;
+    margin: 0 5px;
+    text-align: center;
+    padding: 5px 5px 10px;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & > div{
+        margin-top: 15px;
+    }
+}
+#dist{
+    border:2px solid blue;
+    padding: 10px;
+    width: max-content;
+    border-radius: 5px;
+    text-align: left;
+    & #sub-inputs{
+        width: max-content;
+    }
+}
+#msg{
+    width: 100%;
+    text-align: center;
+    & > .circle{
+        float: right;
+    }
+}
+.width_full{
+    width: 100%;
+}
+.carga{
+    width: 100px;
+}
+div.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+#name{
+    border:2px solid blue;
+    border-radius: 5px;
+    margin: 0 auto 0px 5px;
+    text-align: center;
+    padding: 5px 15px;
+    width: 340px;
+    display: flex;
+}
+#central{
+    text-align: left;
+    width: max-content;
+    margin: auto;
+}
+.msg{
+    margin: auto;
+    text-align: left;
+}
+div.center{
+    text-align: center;
+}
+.aviso{
+    border: 2px solid black;
+    text-align: center;
+}
+#res{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 85%;
+    display: none;
+    margin: 0 auto 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media screen and (max-width: 400px) {
+        width: inherit;
+        margin: 0 0 15px;
+        justify-content: center;
+    }
+}
+.res{
+    border:2px solid blue;
+    border-radius: 5px;
+    width: max-content;
+    height: 40%;
+    padding: 10px;
+    margin: 10px 10px 0 0 ;
+    float: left;
+}
+.number{
+    width: 38px;
+    appearance: textfield;
+    &::-webkit-inner-spin-button{
+        display: none;
+    }
+    margin: 1px 0 0 0;
+}
+.atention{
+    color: red;
+    font-weight: bold;
+}
+.invisible{
+    display: none !important;
+}
+/*Botões e inputs*/
+input{
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(118, 118, 118);
+    box-sizing: border-box;
+    padding: 1px;
+    &:invalid{
+        border-width:2px;
+        outline: 1px solid red;
+        outline-offset: -3px;
+    }
+    &[type="button"]{
+        cursor: pointer;
+        padding: 1px 3px;
+    }
+}
+/* Função apagar div*/
+.circle{
+    width: 18px;
+    float:right;
+    box-sizing: border-box;
+    height: 18px;
+    border: 1.5px solid black;
+    border-radius: 50%;
+    display: flex;
+    margin: -8px -8px auto auto;
+    user-select: none;
+}
+.circle:hover{
+    background-color: lightgray;
+}
+.circle img{
+    margin: auto;
+    width: 10px;
+    height: 10px;
+}
+/*Fim Função apaga div*/
+#loading{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid rgba(118, 118, 118, 0.548);
+    border-left: 10px solid rgba(0, 0, 0, 0.459);
+    margin: auto;
+    animation: loop 2s linear infinite;
+}
+@keyframes loop{
+    0%{ transform: rotate(0deg);}
+    0%{ transform: rotate(360deg);}
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('./fontes/RobotoSlab-Medium.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
