@@ -30,3 +30,7 @@ app.on('activate', () => {
         createWindow()
     }
 })
+// Faz com que o programa não inicie várias vezes durante a instalação
+if (require('electron-squirrel-startup')){
+    return app.quit();
+}
