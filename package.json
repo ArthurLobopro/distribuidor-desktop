@@ -25,15 +25,15 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "./midia/atom_icon.ico"
+        "icon": "./build/icon.ico"
       },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "distribuidor-desktop",
-            "setupIcon": "./midia/atom_icon.ico",
-            "iconURL": "./midia/atom_icon.ico"
+            "setupIcon": "./build/icon.ico",
+            "iconURL": "./build/icon.ico"
           }
         },
         {
