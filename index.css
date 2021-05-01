@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(./public/fonts/css-import/RobotoSlab.css);
+@import url(./public/fonts/css-import/Inconsolata.css);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -37,30 +39,6 @@ footer {
   }
 }
 
-#menu {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 10px auto 15px;
-  padding: 10px 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#div-input-type {
-  margin: 10px auto 5px;
-}
-
 #numat {
   border: 2px solid blue;
   border-radius: 5px;
@@ -96,6 +74,59 @@ footer {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+#menu {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 10px auto 15px;
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 500;
+}
+
+#res {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 85%;
+  display: none;
+  margin: 0 auto 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+  #res {
+    width: inherit;
+    margin: 0 0 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#menu, #res {
+  font-family: "Inconsolata";
+}
+
+#div-input-type {
+  margin: 10px auto 5px;
 }
 
 #msg {
@@ -160,30 +191,6 @@ div.center {
 .aviso {
   border: 2px solid black;
   text-align: center;
-}
-
-#res {
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 5px;
-  width: 85%;
-  display: none;
-  margin: 0 auto 15px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 400px) {
-  #res {
-    width: inherit;
-    margin: 0 0 15px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 .res {
@@ -302,13 +309,5 @@ input[type="button"] {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}
-
-@font-face {
-  font-family: 'Roboto Slab';
-  src: url("./fontes/RobotoSlab-Medium.ttf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
 }
 /*# sourceMappingURL=index.css.map */

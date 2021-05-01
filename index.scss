@@ -1,3 +1,6 @@
+@import url(./public/fonts/css-import/RobotoSlab.css);
+@import url(./public/fonts/css-import/Inconsolata.css);
+
 *{
     box-sizing: border-box;
 }
@@ -24,18 +27,6 @@ footer{
         margin: 0 auto 10px;
     }
 }
-#menu{
-    width: max-content;
-    margin: 10px auto 15px;
-    padding: 10px 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-}
-#div-input-type{
-    margin: 10px auto 5px;
-}
 #numat{
     border:2px solid blue;
     border-radius: 5px;
@@ -59,6 +50,37 @@ footer{
     & #sub-inputs{
         width: max-content;
     }
+}
+#menu{
+    width: max-content;
+    margin: 10px auto 15px;
+    padding: 10px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 500;
+}
+#res{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 85%;
+    display: none;
+    margin: 0 auto 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media screen and (max-width: 400px) {
+        width: inherit;
+        margin: 0 0 15px;
+        justify-content: center;
+    }
+}
+#menu, #res{
+    font-family: "Inconsolata";
+}
+#div-input-type{
+    margin: 10px auto 5px;
 }
 #msg{
     width: 100%;
@@ -103,21 +125,6 @@ div.center{
 .aviso{
     border: 2px solid black;
     text-align: center;
-}
-#res{
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-    width: 85%;
-    display: none;
-    margin: 0 auto 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    @media screen and (max-width: 400px) {
-        width: inherit;
-        margin: 0 0 15px;
-        justify-content: center;
-    }
 }
 .res{
     border:2px solid blue;
@@ -172,14 +179,14 @@ input{
     display: flex;
     margin: -8px -8px auto auto;
     user-select: none;
-}
-.circle:hover{
-    background-color: lightgray;
-}
-.circle img{
-    margin: auto;
-    width: 10px;
-    height: 10px;
+    &:hover{
+        background-color: lightgray;
+    }
+    & img{
+        margin: auto;
+        width: 10px;
+        height: 10px;
+    }
 }
 /*Fim Função apaga div*/
 #loading{
@@ -194,10 +201,4 @@ input{
 @keyframes loop{
     0%{ transform: rotate(0deg);}
     0%{ transform: rotate(360deg);}
-}
-@font-face {
-    font-family: 'Roboto Slab';
-    src: url('./fontes/RobotoSlab-Medium.ttf');
-    font-style: normal;
-    font-weight: 400;
 }
