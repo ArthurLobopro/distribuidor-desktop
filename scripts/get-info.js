@@ -1,4 +1,4 @@
-import atomos from "./atomos.js"
+import atomos from "./info.js"
 const nomeatomo = num => atomos.nomes[num-1]
 const simboloatomo = num => atomos.simbolos[num-1] 
 function achagrupo (num){
@@ -29,7 +29,6 @@ function achagrupo (num){
 }
 
 function achafamilia(num,grupo){
-    console.log(`num ${num}, grupo ${grupo}`);
     return (
     (num==1) ? "<br> Não possiu uma família específica." : 
         (num != 1 && grupo==1) ? "Metais Alcalinos" :

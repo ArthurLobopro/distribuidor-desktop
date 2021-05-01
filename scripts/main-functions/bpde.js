@@ -1,6 +1,6 @@
 import {formataInput,formataAtomo,formataSimbolo} from "../formata.js"
 import {escrevacamadas, ede, ecdv,escreve} from "../escreve.js"
-import Atomo from "../Atomo.js"
+import Atomo from "../atomo.js"
 import {get} from "../util.js"
 let s1,s2,p2,s3,p3,d3,s4,p4,d4,f4,s5,p5,d5,f5,s6,p6,d6,s7,p7
 const get_fim = ()=>{
@@ -9,6 +9,7 @@ const get_fim = ()=>{
     let f = array.indexOf(0)
     return `${subcamadas[f-1]+array[f-1]}`
 }
+const clean_button =  get("clean-btn")
 function bpde() {
     s1=Number(get("1s").value)
     s2=Number(get("2s").value), p2=Number(get("2p").value) 

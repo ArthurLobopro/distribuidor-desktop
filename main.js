@@ -7,7 +7,7 @@ function createWindow () {
         minHeight: 430,
         height: 800,
         titleBarStyle: "hidden",
-        icon: __dirname + "/midia/atom_icon.png",
+        icon: __dirname + "./public/midia/atom_icon.png",
         webPreferences: {
             nodeIntegration: true
         }

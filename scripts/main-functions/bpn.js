@@ -1,7 +1,7 @@
 import {formataInput,formataDados} from "../formata.js"
 import {escrevacamadas, ede, ecdv,escreve} from "../escreve.js"
-import Atomo from "../Atomo.js"
-import atomos_info from "../atomos.js"
+import Atomo from "../atomo.js"
+import atomos_info from "../info.js"
 import {get} from "../util.js"
 const bpn_input = get("nome")
 const nomes = atomos_info.nomes
