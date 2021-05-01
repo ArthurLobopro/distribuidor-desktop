@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distribuidor Eletrônico</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="midia/atomo.png">
+    <link rel="icon" href="./public/midia/atomo.png">
     <meta name="description" content="Faz a distribuição eletrônica dos elétrons automaticamente, além de fazer buscas na tabela periódica fornecendo a distribução, nome, símbolo, número atômico, família e muito mais.">
 </head>
 <body>
@@ -75,7 +75,13 @@
     </div><br><br> -->
     <div id="loading" style="display: none;"></div>
     <section id="res">
-        <span id="msg">Buscas feitas:</span><br>
+        <span id="msg">
+            Buscas feitas:
+            <div class="circle" id="remove-All">
+                <img src="././public/midia/close-icon.png">
+            </div>
+        </span><br>
+        
     </section>
     <footer>&copy;Arthur Lobo</footer>
     <script src="index.js" type="module"></script>
