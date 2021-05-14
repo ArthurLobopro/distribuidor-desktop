@@ -22,6 +22,7 @@ footer{
     color: white;
     width: max-content;
     margin: auto;
+    user-select: none;
     @media screen and (max-width: 400px) {
         width: max-content;
         margin: 0 auto 10px;
@@ -37,6 +38,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    user-select: none;
     & > div{
         margin-top: 15px;
     }
@@ -47,6 +49,7 @@ footer{
     width: max-content;
     border-radius: 5px;
     text-align: left;
+    user-select: none;
     & #sub-inputs{
         width: max-content;
     }
@@ -81,6 +84,7 @@ footer{
 }
 #div-input-type{
     margin: 10px auto 5px;
+    user-select: none;
 }
 #msg{
     width: 100%;
@@ -109,6 +113,7 @@ div.flex{
     padding: 5px 15px;
     width: 340px;
     display: flex;
+    user-select: none;
 }
 #central{
     text-align: left;
