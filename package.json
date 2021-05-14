@@ -1,11 +1,11 @@
 {
   "name": "distribuidor-desktop",
   "version": "1.0.3",
-  "description": "versão desktop da aplicação distribuidor eletrônico",
+  "description": "Faz a distribuição eletrônica dos atomos e muito mais.",
   "main": "main.js",
   "keywords": [],
   "author": "Arthur Lobo",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
     "@electron-forge/maker-deb": "^6.0.0-beta.54",
