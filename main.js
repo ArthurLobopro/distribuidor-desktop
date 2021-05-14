@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow} = require('electron')
 
 function createWindow () {
     const win = new BrowserWindow({
@@ -12,7 +12,7 @@ function createWindow () {
             nodeIntegration: true
         }
     })
-    win.setMenu(null)
+    win.setMenuBarVisibility(null)
     win.setTitle("Distribuidor Eletrônico Desktop")
     win.loadFile('index.html')
 }
