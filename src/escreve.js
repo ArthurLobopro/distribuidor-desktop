@@ -1,7 +1,7 @@
 import {make_div,addEvent} from "./main.js"
 const escrevacamadas = camada => {
     return(
-        `<br>Elétrons nas camadas:
+        `Elétrons nas camadas:
         <br>Camada K: ${camada[0]}
         <br>Camada L: ${camada[1]}
         <br>Camada M: ${camada[2]}
@@ -19,7 +19,7 @@ function ede({s1,s2,p2,s3,p3,d3,s4,p4,d4,f4,s5,p5,d5,f5,s6,p6,d6,s7,p7}){
         4s${s4} 4p${p4} 4d${d4} 4f${f4}<br>
         5s${s5} 5p${p5} 5d${d5} 5f${f5}<br>
         6s${s6} 6p${p6} 6d${d6}<br>
-        7s${s7} 2p${p7}<br>`
+        7s${s7} 2p${p7}|`
 }
 function ecdv(camadaValencia,{s1,s2,p2,s3,p3,s4,p4,s5,p5,s6,p6,s7,p7}){
     let content=""
@@ -56,7 +56,7 @@ function ecdv(camadaValencia,{s1,s2,p2,s3,p3,s4,p4,s5,p5,s6,p6,s7,p7}){
     return content
 }
 const escreve = (content) =>{
-    res.innerHTML+=make_div(content)
+    res.innerHTML+=make_div(String(content).split("|"))
     addEvent()
     res.style.display="flex"
 }

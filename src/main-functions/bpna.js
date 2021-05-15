@@ -15,7 +15,7 @@ function bpna(){
         content+=formataInput(`Número Atômico: ${atomo.num}<br>Carga: ${atomo.carga}<br><br>`)
         content+=formataAtomo(atomo.nome,atomo.carga)
         content+=formataSimbolo(atomo.simbolo,atomo.carga)
-        content+=`Número atômico: ${atomo.num}<br><br>Família: ${atomo.familia}<br>Grupo: ${atomo.grupo}<br>Período: ${atomo.periodo}<br><br>Distribuição Eletrônica:<br>` 
+        content+=`Número atômico: ${atomo.num}<br><br>Família: ${atomo.familia}<br>Grupo: ${atomo.grupo}<br>Período: ${atomo.periodo}<br>|Distribuição Eletrônica:<br>` 
         content+=ede(atomo.distribuicao)
         content+=escrevacamadas(atomo.camadas)
         content+=ecdv(atomo.camadaValencia,atomo.distribuicao)
