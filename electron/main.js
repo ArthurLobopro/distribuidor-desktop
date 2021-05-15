@@ -1,4 +1,5 @@
 const { app, BrowserWindow} = require('electron')
+const path = require('path')
 
 function createWindow () {
     const win = new BrowserWindow({
@@ -7,7 +8,7 @@ function createWindow () {
         minHeight: 430,
         height: 800,
         titleBarStyle: "hidden",
-        icon: __dirname + "./public/midia/atom_icon.png",
+        icon: path.join( __dirname, "../assets/atom_icon.png"),
         webPreferences: {
             nodeIntegration: true
         }
