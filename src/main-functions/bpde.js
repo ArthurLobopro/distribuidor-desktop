@@ -29,7 +29,7 @@ function bpde() {
         content+=formataInput(`Distribuição: ...${get_fim()}<br>Carga: ${carga}<br><br>`)
         content+=formataAtomo(atomo.nome,atomo.carga)
         content+=formataSimbolo(atomo.simbolo,atomo.carga)  
-        content+=`Número atômico: ${atomo.num}<br><br>Família: ${atomo.familia}<br>Grupo: ${atomo.grupo}<br>Período: ${atomo.periodo}<br>Distribuição Eletrônica:<br>`      
+        content+=`Número atômico: ${atomo.num}<br><br>Família: ${atomo.familia}<br>Grupo: ${atomo.grupo}<br>Período: ${atomo.periodo}|Distribuição Eletrônica:<br>`      
         content+=ede(atomo.distribuicao)
         content+=escrevacamadas(atomo.camadas)
         content+=ecdv(atomo.camadaValencia,atomo.distribuicao)
