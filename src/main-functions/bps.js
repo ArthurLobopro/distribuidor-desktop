@@ -24,7 +24,7 @@ function bps(){
     if (!erro){
             let atomo = new Atomo(num)
             content+=`${formataInput(`Símbolo: ${simbol}<br><br>`)}`
-            content+=formataDados(atomo.nome,atomo.simbolo,atomo.num,atomo.familia,atomo.grupo,atomo.periodo) + "|"
+            content+=formataDados(atomo.nome,atomo.simbolo,atomo.num,atomo.familia,atomo.grupo,atomo.periodo)
             content+=ede(atomo.distribuicao)
             content+=escrevacamadas(atomo.camadas)
             content+=ecdv(atomo.camadaValencia,atomo.distribuicao)
