@@ -236,6 +236,28 @@ div.center {
   float: left;
 }
 
+.res > div.coluns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1px;
+  background: #000;
+}
+
+.res > div.coluns > div {
+  background: #fff;
+  padding: 0 8px;
+}
+
+.res > div.coluns > div:first-child {
+  padding-left: 0;
+}
+
+.res > div.coluns > div:last-child {
+  padding-right: 0;
+}
+
 .number {
   width: 38px;
   -webkit-appearance: textfield;
@@ -296,6 +318,7 @@ input[type="button"] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-color: #fff;
 }
 
 .circle:hover {

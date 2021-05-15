@@ -147,6 +147,22 @@ div.center{
     padding: 10px;
     margin: 10px 10px 0 0 ;
     float: left;
+    & > div.coluns {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1px;
+        background: #000;
+        & > div {
+            background: #fff;
+            padding: 0 8px;
+            &:first-child{
+                padding-left: 0;
+            }
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+    }
 }
 .number{
     width: 38px;
@@ -192,6 +208,7 @@ input{
     display: flex;
     margin: -8px -8px auto auto;
     user-select: none;
+    background-color: #fff;
     &:hover{
         background-color: lightgray;
     }
