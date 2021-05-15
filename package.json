@@ -2,7 +2,7 @@
   "name": "distribuidor-desktop",
   "version": "1.0.3",
   "description": "Faz a distribuição eletrônica dos atomos e muito mais.",
-  "main": "main.js",
+  "main": "./electron/main.js",
   "keywords": [],
   "author": "Arthur Lobo",
   "license": "MIT",
