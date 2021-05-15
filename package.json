@@ -31,7 +31,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "distribuidor-desktop",
+            "name": "distribuidor_desktop",
             "setupIcon": "./build/icon.ico",
             "iconURL": "./build/icon.ico",
             "noMsi": false,
