@@ -44,7 +44,10 @@ const sub_functions = event => {
 
 dist_carga.onkeydown = event => { if(event.key === "Enter"){ bpde() } }
 bpde_button.onclick = bpde
-clean_button.onclick = () => { for(let i of subcamadas_inputs){ i.value = i.min } }
+clean_button.onclick = () => { 
+    for(let i of subcamadas_inputs){ i.value = i.min }
+    dist_carga.value = "0"
+ }
 for(let i of subcamadas_inputs){ i.onkeydown = sub_functions }
 
 //Busca por número atômico
