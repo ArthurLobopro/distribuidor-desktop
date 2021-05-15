@@ -3,13 +3,21 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: #56CCF2;
     padding: 0;
     margin: 0;
-    height: calc(100vh - 11px);
     min-width: 320px;
+    overflow: hidden;
+    & #container{
+        overflow: auto;
+        width: 100%;
+        height: max-content;
+        height: calc(100vh - 30px);
+    }
 }
 section {
     border-radius: 10px;
