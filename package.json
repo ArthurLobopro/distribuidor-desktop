@@ -1,6 +1,6 @@
 {
   "name": "distribuidor-desktop",
-  "version": "1.0.3",
+  "version": "1.1.1",
   "description": "Faz a distribuição eletrônica dos atomos e muito mais.",
   "main": "./electron/main.js",
   "keywords": [],
