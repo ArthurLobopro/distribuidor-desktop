@@ -30,6 +30,7 @@
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: #ccc;
+  user-select: none;
 }
 
 #alert-interior .text {
@@ -53,5 +54,6 @@
       align-self: center;
   width: 50px;
   height: 30px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
