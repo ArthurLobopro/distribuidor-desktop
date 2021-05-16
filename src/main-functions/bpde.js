@@ -2,6 +2,7 @@ import {formataInput,formataAtomo,formataSimbolo} from "../formata.js"
 import {escrevacamadas, ede, ecdv,escreve} from "../escreve.js"
 import Atomo from "../atomo.js"
 import {get} from "../util.js"
+import alert from "../../electron/browser-functions/alert.js"
 let s1,s2,p2,s3,p3,d3,s4,p4,d4,f4,s5,p5,d5,f5,s6,p6,d6,s7,p7
 const get_fim = ()=>{
     const array = [s1, s2, p2, s3, p3, s4, d3, p4, s5, d4, p5, s6, f4, d5, p6, s7, f5, d6, p7]
@@ -36,7 +37,10 @@ function bpde() {
         escreve(content)
         clean_button.click()
     }else{
-        alert("Você informou algum número inválido, confira as informações e tente novamente")
+        alert({
+            title: "Erro!",
+            text: "Você informou algum número inválido, confira as informações e tente novamente."
+        })
     }
 }
 export default bpde
