@@ -2,12 +2,16 @@ import {formataInput,formataAtomo, formataSimbolo} from "../formata.js"
 import {escrevacamadas, ede, ecdv,escreve} from "../escreve.js"
 import Atomo from "../atomo.js"
 import { get } from "../util.js";
+import alert from "../../electron/browser-functions/alert.js"
 const bpna_input = get('num')
 const bpna_carga = get('bpna-carga')
 function bpna(){
     let num =Number(bpna_input.value)
     if(num == 0){
-        alert('Não existe um átomo de número atômico 0, por favor informe um valor entre 1 e 118')
+        alert({
+            title:"Erro!",
+            text: "Não existe um átomo de número atômico 0, por favor informe um valor entre 1 e 118"
+        })
     }else{
         const carga=Number(bpna_carga.value)
         const atomo = new Atomo(num,carga)
