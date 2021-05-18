@@ -57,3 +57,17 @@
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
+.down{
+  animation: to_down 500ms;
+}
+
+@keyframes to_down{
+    from{
+        transform: translateY(-100px);
+        opacity: 0.1;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
