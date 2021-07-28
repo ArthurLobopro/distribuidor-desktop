@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     background-color: #56CCF2;
     padding: 30px 0 0;
@@ -19,12 +20,14 @@ body{
         height: calc(100vh - 30px);
     }
 }
+
 section {
     border-radius: 10px;
     color: black;
     background-color: white;
     margin: auto;
 }
+
 footer{
     font-family: 'Roboto Slab', cursive, Arial;
     color: white;
@@ -36,6 +39,7 @@ footer{
         margin: 0 auto 10px;
     }
 }
+
 #numat{
     border:2px solid blue;
     border-radius: 5px;
@@ -51,6 +55,7 @@ footer{
         margin-top: 15px;
     }
 }
+
 #dist{
     border:2px solid blue;
     padding: 10px;
@@ -62,6 +67,7 @@ footer{
         width: max-content;
     }
 }
+
 #menu{
     width: max-content;
     margin: 10px auto 15px;
@@ -72,12 +78,13 @@ footer{
     flex-direction: column;
     font-weight: 500;
 }
+
 #res{
     padding: 10px;
     border: 2px solid black;
     border-radius: 5px;
     width: 88%;
-    display: none;
+    display: flex;
     margin: 0 auto 15px;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,13 +94,16 @@ footer{
         justify-content: center;
     }
 }
+
 #menu, #res{
     font-family: "Inconsolata";
 }
+
 #div-input-type{
     margin: 10px auto 5px;
     user-select: none;
 }
+
 #msg{
     width: 100%;
     text-align: center;
@@ -101,18 +111,22 @@ footer{
         float: right;
     }
 }
+
 .width_full{
     width: 100%;
 }
+
 .carga{
     width: 100px;
 }
+
 div.flex{
     display: flex;
     justify-content: center;
     align-items: center;
     height: inherit;
 }
+
 #name{
     border:2px solid blue;
     border-radius: 5px;
@@ -123,22 +137,27 @@ div.flex{
     display: flex;
     user-select: none;
 }
+
 #central{
     text-align: left;
     width: max-content;
     margin: auto;
 }
+
 .msg{
     margin: auto;
     text-align: left;
 }
+
 div.center{
     text-align: center;
 }
+
 .aviso{
     border: 2px solid black;
     text-align: center;
 }
+
 .res{
     border:2px solid blue;
     border-radius: 5px;
@@ -164,6 +183,7 @@ div.center{
         }
     }
 }
+
 .number{
     width: 38px;
     appearance: textfield;
@@ -172,13 +192,16 @@ div.center{
     }
     margin: 1px 0 0 0;
 }
+
 .atention{
     color: red;
     font-weight: bold;
 }
+
 .invisible{
     display: none !important;
 }
+
 /*Botões e inputs*/
 input{
     border-radius: 2px;
@@ -228,6 +251,7 @@ input{
     margin: auto;
     animation: loop 2s linear infinite;
 }
+
 @keyframes loop{
     0%{ transform: rotate(0deg);}
     0%{ transform: rotate(360deg);}
