@@ -21,4 +21,4 @@ function setWindowActions(){
     })
 }
 
-module.exports = setWindowActions()
+export default setWindowActions()
