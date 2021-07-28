@@ -3,7 +3,7 @@ import {escrevacamadas, ede, ecdv,escreve} from "../escreve.js"
 import Atomo from "../atomo.js"
 import atomos_info from "../info.js"
 import {get} from "../util.js"
-import alert from "../../electron/browser-functions/alert.js"
+import alert from "../../../electron/browser-functions/alert.js"
 const bps_input = get('simbolo')
 const simbolos = atomos_info.simbolos
 function bps(){
