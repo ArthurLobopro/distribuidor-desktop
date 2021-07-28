@@ -1,5 +1,7 @@
 import { ChangeEvent, useState } from "react"
 import bpde from "../../distribuidor/main-functions/bpde"
+import bpna from "../../distribuidor/main-functions/bpna"
+import SubInput from "./SubInput"
 
 interface MenuProps{
     state: AppState,
@@ -11,31 +13,36 @@ function bpdeClick(state: AppState, setState: CallableFunction){
     setState({...newState})
 }
 
+function numatClick(state: AppState, setState: CallableFunction) {
+    const newState = bpna(state)
+    setState({...newState})
+}
+
 const menus = {
-    dist(state, setState){
+    dist(state: AppState, setState: CallableFunction){
         return (
             <div id="dist">
                 <div className="center">Buscar por distribuição</div><br/>
                 <div id="sub-inputs">
-                    1s<input type="number" id="1s" defaultValue="1" min="1" max="2" className="number"/><br/>
-                    2s<input type="number" id="2s" defaultValue="0" min="0" max="2" className="number"/>
-                    2p<input type="number" id="2p" defaultValue="0" min="0" max="6" className="number"/><br/>
-                    3s<input type="number" id="3s" defaultValue="0" min="0" max="2" className="number"/>
-                    3p<input type="number" id="3p" defaultValue="0" min="0" max="6" className="number"/>
-                    3d<input type="number" id="3d" defaultValue="0" min="0" max="10" className="number"/><br/>
-                    4s<input type="number" id="4s" defaultValue="0" min="0" max="2" className="number"/>
-                    4p<input type="number" id="4p" defaultValue="0" min="0" max="6" className="number"/>
-                    4d<input type="number" id="4d" defaultValue="0" min="0" max="10" className="number"/>
-                    4f<input type="number" id="4f" defaultValue="0" min="0" max="14" className="number"/><br/>
-                    5s<input type="number" id="5s" defaultValue="0" min="0" max="2" className="number"/>
-                    5p<input type="number" id="5p" defaultValue="0" min="0" max="6" className="number"/>
-                    5d<input type="number" id="5d" defaultValue="0" min="0" max="10" className="number"/>
-                    5f<input type="number" id="5f" defaultValue="0" min="0" max="14" className="number"/><br/>
-                    6s<input type="number" id="6s" defaultValue="0" min="0" max="2" className="number"/>
-                    6p<input type="number" id="6p" defaultValue="0" min="0" max="6" className="number"/>
-                    6d<input type="number" id="6d" defaultValue="0" min="0" max="10" className="number"/><br/>
-                    7s<input type="number" id="7s" defaultValue="0" min="0" max="2" className="number"/>
-                    7p<input type="number" id="7p" defaultValue="0" min="0" max="6" className="number"/><br/><br/>
+                    <SubInput id="1s"/><br/>
+                    <SubInput id="2s"/>
+                    <SubInput id="2p"/><br/>
+                    <SubInput id="3s"/>
+                    <SubInput id="3p"/>
+                    <SubInput id="3d"/><br/>
+                    <SubInput id="4s"/>
+                    <SubInput id="4p"/>
+                    <SubInput id="4d"/>
+                    <SubInput id="4f"/><br/>
+                    <SubInput id="5s"/>
+                    <SubInput id="5p"/>
+                    <SubInput id="5d"/>
+                    <SubInput id="5f"/><br/>
+                    <SubInput id="6s"/>
+                    <SubInput id="6p"/>
+                    <SubInput id="6d"/><br/>
+                    <SubInput id="7s"/>
+                    <SubInput id="7p"/><br/><br/>
                 </div>
                 Carga: <input type="number" id="dist-carga" defaultValue="0" className="carga"/><br/><br/>
                 <input type="button" defaultValue="Enviar" id="bpde-btn" onClick={ () => bpdeClick(state,setState) }/>
@@ -43,7 +50,7 @@ const menus = {
             </div>
         )
     },
-    numat(){
+    numat(state: AppState, setState: CallableFunction){
         return (
             <div id="numat">
                 <span className="width_full">Buscar por Número Atômico(número de prótons).</span>
@@ -52,7 +59,7 @@ const menus = {
                     <input type="number" min="1" max="118" id="num" autoComplete="off"/><br/><br/>
                     Carga: 
                     <input type="number" id="bpna-carga" defaultValue="0" className="carga"/>
-                    <input type="button" defaultValue="Enviar" id="bpna"/>
+                    <button  onClick={ () => numatClick(state,setState)}>Enviar</button>
                 </div>
             </div>
         )
