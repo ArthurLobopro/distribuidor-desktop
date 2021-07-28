@@ -11,11 +11,6 @@ const get_fim = ()=>{
     return `${subcamadas[f-1]+array[f-1]}`
 }
 
-interface AppState {
-    alert : object,
-    result: object[]
-}
-
 function bpde(state : AppState) {
     const clean_button =  get("clean-btn")
     s1=Number(get("1s").value)
