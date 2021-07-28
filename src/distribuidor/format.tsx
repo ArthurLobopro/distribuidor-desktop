@@ -40,7 +40,11 @@ const formataSimbolo = (simbolo, carga) => {
 }
 
 const formataInput = input => {
-    return `<em>Dados Fornecidos:</em><br/><br/>${input}<em>Resultado:</em><br/><br/>`
+    return (
+        <>
+            <em>Dados Fornecidos:</em><br/><br/>{input}<em>Resultado:</em><br/><br/>
+        </>
+    )
 }
 
 const formataDados = (nome,simbolo,num,familia,grupo,periodo) => {
