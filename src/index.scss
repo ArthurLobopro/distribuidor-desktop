@@ -66,6 +66,9 @@ footer{
     & #sub-inputs{
         width: max-content;
     }
+    & input[type=button]{
+        margin: auto 8px 0 0;
+    }
 }
 
 #menu{
@@ -190,7 +193,7 @@ div.center{
     &::-webkit-inner-spin-button{
         display: none;
     }
-    margin: 1px 0 0 0;
+    margin: 1px 8px 0 0;
 }
 
 .atention{
@@ -210,6 +213,7 @@ input{
     border-color: rgb(118, 118, 118);
     box-sizing: border-box;
     padding: 1px;
+    margin: 0 0 0 8px;
     &:invalid{
         border-width:2px;
         outline: 1px solid red;
@@ -218,6 +222,7 @@ input{
     &[type="button"]{
         cursor: pointer;
         padding: 1px 3px;
+        margin: 0 0 0 8px;
     }
 }
 /* Função apagar div*/
