@@ -1,7 +1,10 @@
 const { app, BrowserWindow} = require('electron')
-const path = require('path')
+import path from 'path'
 
 require('./header/header-actions-main.js')
+
+declare const MAIN_WINDOW_WEBPACK_ENTRY: string
+declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 
 function createWindow () {
     const win = new BrowserWindow({
@@ -13,12 +16,14 @@ function createWindow () {
         icon: path.join( __dirname, "../assets/atom_icon.png"),
         webPreferences: {
             nodeIntegration: true,
-            preload: path.join(__dirname, 'preload.js')
+            // preload: path.join(__dirname, 'preload.js')
+            preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY
         }
     })
     win.setMenuBarVisibility(null)
     win.setTitle("Distribuidor Eletrônico Desktop")
-    win.loadFile('index.html')
+    // win.loadFile('index.html')
+    win.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 }
 
 app.whenReady().then(createWindow)
@@ -36,5 +41,5 @@ app.on('activate', () => {
 })
 // Faz com que o programa não inicie várias vezes durante a instalação
 if (require('electron-squirrel-startup')){
-    return app.quit();
+    app.quit();
 }
