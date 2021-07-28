@@ -1,7 +1,18 @@
 import { ChangeEvent, useState } from "react"
+import bpde from "../../distribuidor/main-functions/bpde"
+
+interface MenuProps{
+    state: AppState,
+    set: CallableFunction
+}
+
+function bpdeClick(state: AppState, setState: CallableFunction){
+    const newState = bpde(state)
+    setState({...newState})
+}
 
 const menus = {
-    dist(){
+    dist(state, setState){
         return (
             <div id="dist">
                 <div className="center">Buscar por distribuição</div><br/>
@@ -27,7 +38,7 @@ const menus = {
                     7p<input type="number" id="7p" defaultValue="0" min="0" max="6" className="number"/><br/><br/>
                 </div>
                 Carga: <input type="number" id="dist-carga" defaultValue="0" className="carga"/><br/><br/>
-                <input type="button" defaultValue="Enviar" id="bpde-btn"/>
+                <input type="button" defaultValue="Enviar" id="bpde-btn" onClick={ () => bpdeClick(state,setState) }/>
                 <input type="button" defaultValue="Limpar" id="clean-btn"/><br/><br/>
             </div>
         )
@@ -63,11 +74,17 @@ const menus = {
     }
 }
 
-export default function Menu() {
+export default function Menu(props:MenuProps) {
     const [atualMenu, setMenu] = useState('dist')
 
     function HandleChange(event:ChangeEvent<HTMLSelectElement>) {
-        setMenu(event.target.value)
+        const value = event.target.value   
+        
+        if(value === "all"){
+            return 
+        }
+        
+        setMenu(value)
     }
 
     return (
@@ -75,17 +92,17 @@ export default function Menu() {
 
             <div id="content">
                 {
-                    menus[atualMenu]()
+                    menus[atualMenu]?.(props.state, props.set)
                 }
             </div>
 
             <div id="div-input-type">
                 Buscar por: 
-                <select id="input-type" onChange={HandleChange}>
-                    <option defaultValue="dist" selected>Distribuição.</option>
-                    <option defaultValue="numat">Número Atômico.</option>
-                    <option defaultValue="name">Nome ou símbolo.</option>
-                    <option defaultValue="all">Mostrar Todos.</option>
+                <select id="input-type" defaultValue='dist' onChange={HandleChange}>
+                    <option value="dist">Distribuição.</option>
+                    <option value="numat">Número Atômico.</option>
+                    <option value="name">Nome ou símbolo.</option>
+                    <option value="all">Mostrar Todos.</option>
                 </select>
             </div>
         </section>
