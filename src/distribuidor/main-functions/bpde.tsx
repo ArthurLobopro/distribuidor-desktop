@@ -1,6 +1,6 @@
 import { formataAtomo,formataSimbolo } from "../format"
 import {escrevacamadas, ede, ecdv } from "../write"
-import Atomo from "../atomo.js"
+import Atomo from "../Atomo"
 import {get} from "../util"
 
 let s1,s2,p2,s3,p3,d3,s4,p4,d4,f4,s5,p5,d5,f5,s6,p6,d6,s7,p7

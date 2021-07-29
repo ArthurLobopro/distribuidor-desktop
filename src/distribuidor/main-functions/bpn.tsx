@@ -1,6 +1,6 @@
 import { formataInput,formataDados } from "../format"
 import { escrevacamadas, ede, ecdv } from "../write"
-import Atomo from "../atomo.js"
+import Atomo from "../Atomo"
 import atomos_info from "../info.js"
 import { get } from "../util"
 

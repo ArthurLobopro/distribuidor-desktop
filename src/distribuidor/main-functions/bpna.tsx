@@ -1,6 +1,6 @@
 import {formataInput,formataAtomo, formataSimbolo} from "../format"
 import {escrevacamadas, ede, ecdv } from "../write"
-import Atomo from "../atomo.js"
+import Atomo from "../Atomo"
 import { get } from "../util";
 
 function bpna(state : AppState){
