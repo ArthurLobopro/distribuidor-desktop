@@ -11,7 +11,7 @@ function camadas({ s1, s2, p2, s3, p3, d3, s4, p4, d4, f4, s5, p5, d5, f5, s6, p
     return camada
 }
 
-const get_camadaValencia = (camada: number) => {
+const get_camadaValencia = (camada: number[]) => {
     let camadaValencia =
         camada[6] > 0 ? 7 :
             camada[5] > 0 ? 6 :
