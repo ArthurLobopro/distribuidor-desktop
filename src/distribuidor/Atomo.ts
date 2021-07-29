@@ -1,6 +1,6 @@
-import { achafamilia, achagrupo, achaperiodo, nomeatomo, simboloatomo } from "./get-info.js"
-import distribuidor from "./distribuidor.js"
-import { camadas as get_camada, get_camadaValencia } from "./camadas.js"
+import { achafamilia, achagrupo, achaperiodo, nomeatomo, simboloatomo } from "./get-info"
+import distribuidor from "./distribuidor"
+import { camadas as get_camada, get_camadaValencia } from "./camadas"
 
 interface distribuicao{
     s1: number,
