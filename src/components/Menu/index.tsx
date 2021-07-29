@@ -3,6 +3,7 @@ import SubInput from "./SubInput"
 import bpde from "../../distribuidor/main-functions/bpde"
 import bpna from "../../distribuidor/main-functions/bpna"
 import bpn from "../../distribuidor/main-functions/bpn"
+import bps from "../../distribuidor/main-functions/bps"
 
 interface MenuProps{
     state: AppState,
@@ -21,6 +22,11 @@ function numatClick(state: AppState, setState: CallableFunction) {
 
 function nameClick(state: AppState, setState: CallableFunction) {
     const newState = bpn(state)
+    setState(newState)
+}
+
+function symbolClick(state: AppState, setState: CallableFunction) {
+    const newState = bps(state)
     setState(newState)
 }
 
@@ -78,7 +84,7 @@ const menus = {
                         Busca por nome:<br/> <input type="text" id="nome"/> 
                         <button onClick={ () => nameClick(state,setState)}>Buscar</button><br/>
                         Busca por símbolo:<br/> <input type="text" id="simbolo" />
-                        <input type="button" id="bps" defaultValue="Buscar"/>
+                        <button onClick={ () => symbolClick(state,setState) }>Buscar</button>
                     </div><br/>
                     <span className="msg"><span className="atention">Atenção!!!</span> O programa não é case sensitive, porém é necessário por os acentos.</span>
                 </div>
