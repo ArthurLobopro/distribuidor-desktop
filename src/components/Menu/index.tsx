@@ -63,7 +63,10 @@ const menus = {
                     <SubInput id="7s"/>
                     <SubInput id="7p"/><br/><br/>
                 </div>
-                Carga: <input type="number" id="dist-carga" defaultValue="0" className="carga"/><br/><br/>
+                Carga: <input 
+                            type="number" id="dist-carga" defaultValue="0" className="carga" 
+                            onKeyDown={event => autoSubmit(event, bpdeClick, state,setState)}
+                        /><br/><br/>
                 <input type="button" defaultValue="Enviar" id="bpde-btn" onClick={ () => bpdeClick(state,setState) }/>
                 <input type="button" defaultValue="Limpar" id="clean-btn"/><br/><br/>
             </div>
@@ -75,7 +78,10 @@ const menus = {
                 <span className="width_full">Buscar por Número Atômico(número de prótons).</span>
                 <div>
                     Num. Atômico:
-                    <input type="number" min="1" max="118" id="num" autoComplete="off"/><br/><br/>
+                    <input 
+                        type="number" min="1" max="118" 
+                        id="num" autoComplete="off" onKeyDown={event => autoSubmit(event, numatClick, state,setState)}
+                    /><br/><br/>
                     Carga: 
                     <input type="number" id="bpna-carga" defaultValue="0" className="carga"/>
                     <button  onClick={ () => numatClick(state,setState)}>Enviar</button>
@@ -88,9 +94,9 @@ const menus = {
             <div id="name">
                 <div id="central">
                     <div className="center">
-                        Busca por nome:<br/> <input type="text" id="nome"/> 
+                        Busca por nome:<br/> <input type="text" id="nome" onKeyDown={event => autoSubmit(event, nameClick, state,setState)}/> 
                         <button onClick={ () => nameClick(state,setState)}>Buscar</button><br/>
-                        Busca por símbolo:<br/> <input type="text" id="simbolo" />
+                        Busca por símbolo:<br/> <input type="text" id="simbolo" onKeyDown={event => autoSubmit(event, symbolClick, state,setState)}/>
                         <button onClick={ () => symbolClick(state,setState) }>Buscar</button>
                     </div><br/>
                     <span className="msg"><span className="atention">Atenção!!!</span> O programa não é case sensitive, porém é necessário por os acentos.</span>
