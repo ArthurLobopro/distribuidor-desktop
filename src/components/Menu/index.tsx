@@ -30,6 +30,13 @@ function symbolClick(state: AppState, setState: CallableFunction) {
     setState(newState)
 }
 
+function autoSubmit(event, callback: CallableFunction, ...calbackParams) {
+    const key = event.key
+    if(key === "Enter"){
+        callback(...calbackParams)
+    }
+}
+
 const menus = {
     dist(state: AppState, setState: CallableFunction){
         return (
