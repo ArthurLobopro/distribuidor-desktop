@@ -36,10 +36,6 @@ function bps(state){
                 {
                     formataDados(atomo.nome,atomo.simbolo,atomo.num,atomo.familia,atomo.grupo,atomo.periodo)
                 }
-                Número atômico: {atomo.num}<br/><br/>
-                Família: {atomo.familia}<br/>
-                Grupo: {atomo.grupo}<br/>
-                Período: {atomo.periodo}<br/>
             </div>
         ),
         (
