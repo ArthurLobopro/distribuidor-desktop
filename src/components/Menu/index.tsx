@@ -1,7 +1,8 @@
 import { ChangeEvent, useState } from "react"
+import SubInput from "./SubInput"
 import bpde from "../../distribuidor/main-functions/bpde"
 import bpna from "../../distribuidor/main-functions/bpna"
-import SubInput from "./SubInput"
+import bpn from "../../distribuidor/main-functions/bpn"
 
 interface MenuProps{
     state: AppState,
@@ -10,12 +11,17 @@ interface MenuProps{
 
 function bpdeClick(state: AppState, setState: CallableFunction){
     const newState = bpde(state)
-    setState({...newState})
+    setState(newState)
 }
 
 function numatClick(state: AppState, setState: CallableFunction) {
     const newState = bpna(state)
-    setState({...newState})
+    setState(newState)
+}
+
+function nameClick(state: AppState, setState: CallableFunction) {
+    const newState = bpn(state)
+    setState(newState)
 }
 
 const menus = {
@@ -64,13 +70,13 @@ const menus = {
             </div>
         )
     },
-    name(){
+    name(state: AppState, setState: CallableFunction){
         return (
             <div id="name">
                 <div id="central">
                     <div className="center">
                         Busca por nome:<br/> <input type="text" id="nome"/> 
-                        <input type="button" id="bpn" defaultValue="Buscar"/><br/>
+                        <button onClick={ () => nameClick(state,setState)}>Buscar</button><br/>
                         Busca por símbolo:<br/> <input type="text" id="simbolo" />
                         <input type="button" id="bps" defaultValue="Buscar"/>
                     </div><br/>
