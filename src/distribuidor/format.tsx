@@ -47,8 +47,13 @@ const formataInput = input => {
     )
 }
 
-const formataDados = (nome,simbolo,num,familia,grupo,periodo) => {
-    return `Elemento: ${nome}<br/>Símbolo: ${simbolo}<br/>Número atômico: ${num}<br/><br/>Família: ${familia}<br/>
-    Grupo: ${grupo}<br/>Período ${periodo}<br/>|Distribuição Eletrônica:<br/>`
+const formataDados = (nome: string,simbolo: string,num: number,familia :string,grupo: number,periodo:number) => {
+    return (
+        <>
+            Elemento: {nome}<br/>Símbolo: {simbolo}<br/>
+            Número atômico: {num}<br/><br/>Família: {familia}<br/>
+            Grupo: {grupo}<br/>Período {periodo}<br/>
+        </>
+    )
 }
 export { formataAtomo, formataDados, formataInput, formataSimbolo }
