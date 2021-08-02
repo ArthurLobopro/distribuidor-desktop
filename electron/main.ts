@@ -21,11 +21,14 @@ function createWindow () {
         height: 800,
         frame: false,
         icon: iconPath,
+        show: false,
         webPreferences: {
             nodeIntegration: true,
             preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY
         }
     })
+    win.maximize()
+    win.on('ready-to-show', () =>  win.show())
     win.setMenuBarVisibility(null)
     win.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 }
