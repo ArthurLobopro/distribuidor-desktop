@@ -3,10 +3,10 @@ import {escrevacamadas, ede, ecdv } from "../write"
 import Atomo from "../Atomo"
 import { get } from "../util";
 
-function bpna(state : AppState){
+function bpna(state : AppState, num: (number | null) = null){
     const bpna_input = get('num')
     const bpna_carga = get('bpna-carga')
-    let num = Number(bpna_input.value)
+    num = num ?? Number(bpna_input.value)
     if(num == 0){
         return({
             ...state,
@@ -16,7 +16,7 @@ function bpna(state : AppState){
             }
         })
     }else{
-        const carga=Number(bpna_carga.value)
+        const carga = Number(bpna_carga?.value) || 0
         const atomo = new Atomo(num,carga)
 
         let content= [
@@ -62,9 +62,6 @@ function bpna(state : AppState){
                 </div>
             )
         ]
-        
-        bpna_input.value=""
-        bpna_carga.value=""
 
         return {
             ...state,

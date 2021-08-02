@@ -113,7 +113,19 @@ export default function Menu(props:MenuProps) {
         const value = event.target.value   
         
         if(value === "all"){
-            return 
+            let newState = []
+
+            for(let i = 1; i<=118; i++){
+                newState = bpna({result:newState}, i).result
+            }
+
+            const state = props.state
+            
+            props.set({
+                ...state,
+                result: [...state.result,...newState]
+            })
+            return
         }
         
         setMenu(value)
