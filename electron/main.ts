@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, screen } from 'electron'
 import path from 'path'
 
 import './header/header-actions-main'
@@ -13,12 +13,12 @@ const assetsPath =
 
 function createWindow () {
     const iconPath = path.join(assetsPath, "/assets/atom_icon.png")
-
+    const dimensions = screen.getPrimaryDisplay().size
     const win = new BrowserWindow({
-        width: 820,
+        width: dimensions.width,
         minWidth: 820,
         minHeight: 430,
-        height: 800,
+        height: dimensions.height,
         frame: false,
         icon: iconPath,
         show: false,
@@ -27,7 +27,6 @@ function createWindow () {
             preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY
         }
     })
-    win.maximize()
     win.on('ready-to-show', () =>  win.show())
     win.setMenuBarVisibility(null)
     win.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
