@@ -13,7 +13,7 @@ declare module '*.png' {
     export default src;
 }
 
-type AppState = {
+interface AppState {
 
     alert: object,
     result: {
